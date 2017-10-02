@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="f17comp1011assignment1.NewCarViewController">
+   <children>
+      <GridPane layoutX="26.0" layoutY="23.0" prefHeight="326.0" prefWidth="336.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="236.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Year" />
+            <Label text="Manufacturer" GridPane.rowIndex="1" />
+            <Label text="Model" GridPane.rowIndex="2" />
+            <Label text="Color" GridPane.rowIndex="3" />
+            <Label text="Body Type" GridPane.rowIndex="4" />
+            <Label text="Dealer Cost" GridPane.rowIndex="5" />
+            <ComboBox fx:id="colorComboBox" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="bodyTypeComboBox" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="dealerCostTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="modelTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="manufacturerComboBox" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Slider fx:id="yearSlider" prefHeight="18.0" prefWidth="180.0" />
+                  <Label fx:id="yearLabel" text="Label" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <ImageView fx:id="vehicleImage" fitHeight="150.0" fitWidth="200.0" layoutX="394.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="loadImageButton" layoutX="437.0" layoutY="240.0" mnemonicParsing="false" onAction="#chooseImageButtonPushed" prefWidth="125.0" text="Upload Image" />
+      <Button fx:id="saveCarButton" layoutX="437.0" layoutY="300.0" mnemonicParsing="false" onAction="#saveCarButtonPushed" prefWidth="125.0" text="Save Vehicle" />
+      <Label fx:id="errMsgLabel" layoutX="126.0" layoutY="356.0" prefHeight="21.0" prefWidth="431.0" text="Label" textFill="#e81b1b" />
+      <Button layoutX="580.0" layoutY="300.0" mnemonicParsing="false" onAction="#cancelButtonPushed" prefWidth="125.0" text="Cancel" />
+   </children>
+</AnchorPane>
